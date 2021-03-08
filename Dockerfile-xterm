@@ -1,0 +1,6 @@
+FROM ubuntu
+
+RUN apt-get update && apt-get install -y xterm
+RUN useradd -ms /bin/bash xterm
+USER xterm
+WORKDIR /home/xterm
