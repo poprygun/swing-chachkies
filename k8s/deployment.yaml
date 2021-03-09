@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: swing-chachkies
+  name: swing-chachkies
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swing-chachkies
+  template:
+    metadata:
+      labels:
+        app: swing-chachkies
+    spec:
+      containers:
+      - image: swing-chachkies
+        name: swing-chachkies
+        imagePullPolicy: Never
+        env:
+          - name: DISPLAY
+            value: "docker.for.mac.host.internal:0"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
