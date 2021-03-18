@@ -1,5 +1,7 @@
 # Experiment running Java UI in containers.
 
+Able to run the application locally, on Kubernetes Desktop, but not with hosted Kubernetes!
+
 ## Pre-requisites:
 
 Create a sample Java UI application image
